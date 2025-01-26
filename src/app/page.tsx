@@ -7,12 +7,18 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
+import nextConfig from "../../next.config";
 
 export default function Home() {
   return (
     <div className="p-10">
       <div className="flex justify-between">
-        <Image src="/icon.png" alt="Qvers" width={100} height={50} />
+        <Image
+          src={`${nextConfig.basePath}/icon.png`}
+          alt="Qvers"
+          width={100}
+          height={50}
+        />
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
@@ -44,7 +50,7 @@ export default function Home() {
                 {/* donwload on appstore button */}
 
                 <Image
-                  src="/download.svg"
+                  src={`${nextConfig.basePath}/download.svg`}
                   alt="Hero"
                   width={150}
                   height={500}
@@ -53,7 +59,12 @@ export default function Home() {
             </div>
             {/* Col */}
             <div className="relative ms-4">
-              <Image src="/preview.png" alt="Hero" width={500} height={500} />
+              <Image
+                src={`${nextConfig.basePath}/preview.png`}
+                alt="Hero"
+                width={500}
+                height={500}
+              />
             </div>
             {/* End Col */}
           </div>
